@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #20262e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+    color:#e9cbb3;
+}
+
+.game-grid{
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    color: #2f616e;
+    position: relative;
+}
+
+.cell {
+    border: 1px solid #e9cbb3;
+    font-size: 130px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cell:hover{
+    background-color: #10151d;
+}
+
+.strike{
+    position: absolute;
+    background-color: #a5194c;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-col-1 {
+    height: 100%;
+    width: 4px;
+    left: 15%;
+}
+
+.strike-col-2 {
+    height: 100%;
+    width: 4px;
+    left: 50%;
+}
+
+.strike-col-3 {
+    height: 100%;
+    width: 4px;
+    left: 83%;
+}
+
+.strike-diagonal-1{
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-diagonal-2{
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+#winner {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    color: #e9cbb3;
+}
+
+#restart{
+    background-color: #e9cbb3;
+    color: #20262e;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#restart:hover{
+    background-color: #d8baa2;
+}
