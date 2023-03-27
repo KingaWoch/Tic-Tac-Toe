@@ -20,9 +20,6 @@ function playerTurn(el) {
 
     currentPlayer = currentPlayer == "X" ? "O" : "X";
 
-    /*if(el.innerHTML == "X") {
-        el.style.color = "#a5194c";
-    }*/
 
     checkWinner();
 }
